@@ -62,5 +62,12 @@ public class Main {
             }
             System.out.println(output.equals("") ? i : output);
         }
+        //phase4
+        String[] PCparts = {"GPU", "CPU", "RAM"};
+        System.out.print("----------\n");
+        for (String part : PCparts) {
+            System.out.println(part);
+        }
     }
+
 }
