@@ -68,6 +68,14 @@ public class Main {
         for (String part : PCparts) {
             System.out.println(part);
         }
+        String z = "t";
+        String x = "ca" + z;
+        String y = "cat";
+        System.out.println(x == y);
+        System.out.println(x.equals(y));
+
+        Cat myPet = new Cat();
+        myPet.move();
     }
 
 }
