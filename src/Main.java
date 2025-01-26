@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import organisms.*;
+
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -74,8 +76,19 @@ public class Main {
         System.out.println(x == y);
         System.out.println(x.equals(y));
 
-        Cat myPet = new Cat();
+        System.out.println("----------------------------");
+        System.out.println("this begins access modifiers section");
+        maineCoon myPet = new maineCoon();
         myPet.move();
+//        cat my2ndPet = new cat();
+//        my2ndPet.move(); //not allowed, it implements a protected method outside the package AND outside the subclass
     }
 
+}
+
+class maineCoon extends cat {
+    @Override
+    protected void move() {
+        System.out.println("The maine coon gracefully walks");
+    }
 }
