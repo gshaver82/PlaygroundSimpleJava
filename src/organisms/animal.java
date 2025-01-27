@@ -1,9 +1,7 @@
 package organisms;
 
-abstract class animal {
+abstract public class animal {
     String name;
 
-    protected void move() {
-        System.out.println("This animal moves");
-    }
+    abstract void move();
 }
