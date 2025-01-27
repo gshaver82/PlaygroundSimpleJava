@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import organisms.*;
 
 public class Main {
@@ -78,10 +76,17 @@ public class Main {
 
         System.out.println("----------------------------");
         System.out.println("this begins access modifiers section");
+        System.out.println(cat.legs);
+        cat.grow();
         maineCoon myPet = new maineCoon();
         myPet.move();
 //        cat my2ndPet = new cat();
 //        my2ndPet.move(); //not allowed, it implements a protected method outside the package AND outside the subclass
+        customCat pixie = new customCat("jumping playfully", "pixie");
+        pixie.move();
+        customCat max = new customCat("jumping playfully", "max", "grey");
+        max.move();
+
     }
 
 }
@@ -90,5 +95,28 @@ class maineCoon extends cat {
     @Override
     protected void move() {
         System.out.println("The maine coon gracefully walks");
+    }
+}
+
+class customCat extends cat {
+    private final String movement;
+    private final String name;
+    private String color;
+
+    @Override
+    protected void move() {
+        System.out.println("Your " + (color != null ? color + " " : "") + "cat named " + name + " moves by " + movement);
+    }
+
+
+    customCat(String movement, String name) {
+        this.movement = movement;
+        this.name = name;
+    }
+
+    customCat(String movement, String name, String color) {
+        this.movement = movement;
+        this.name = name;
+        this.color = color;
     }
 }
