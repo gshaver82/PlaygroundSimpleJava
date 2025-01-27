@@ -3,7 +3,7 @@ package organisms;
 public class cat extends animal {
     public static int legs = 4;
 
-    public static void grow() {
+    public void grow() {
         System.out.println("kitten grows into cat");
     }
 

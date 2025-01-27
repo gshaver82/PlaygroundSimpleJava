@@ -77,7 +77,7 @@ public class Main {
         System.out.println("----------------------------");
         System.out.println("this begins access modifiers section");
         System.out.println(cat.legs);
-        cat.grow();
+        
         maineCoon myPet = new maineCoon();
         myPet.move();
 //        cat my2ndPet = new cat();
@@ -86,6 +86,7 @@ public class Main {
         pixie.move();
         customCat max = new customCat("jumping playfully", "max", "grey");
         max.move();
+        max.grow();
 
     }
 
